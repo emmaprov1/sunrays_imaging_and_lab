@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SunRay imaging - Medical and Laboratory</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900%7CPoppins:300,400,800&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome and peStroke Icons -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Required CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+    <!-- PrettyPhoto -->
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/prettyPhoto.css">
+
+    <!-- Required Scripts -->
+    <script src="assets/js/superfish.js"></script>
+    <script src="assets/js/hoverIntent.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/labora-custom.js"></script>
+
+    <!-- Flex Slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+    <script src="assets/js/jquery.flexslider-min.js"></script>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <script src="assets/js/owl.carousel.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $("#owl-20").owlCarousel({
+                autoPlay: 3000,
+                pagination: false,
+                items: 5,
+                itemsDesktop: [1199, 4],
+                itemsDesktopSmall: [1024, 4],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 2]
+            });
+        });
+
+
+
+
+
+
+
+        // Sticky Header
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 100) {
+                $(".top-nav").addClass("light-header");
+            } else {
+                $(".top-nav").removeClass("light-header");
+            }
+        });
+
+        // Year for copy content
+        $(function() {
+            var theYear = new Date().getFullYear();
+            $('#year').html(theYear);
+        });
+    </script>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 1900
+            })
+        });
+
+
+
+        $(document).ready(function() {
+            "use strict";
+
+            var nav_offset_top = $('header').height() + 100;
+
+            //* Navbar Fixed  
+            function navbarFixed() {
+                if ($('header').length) {
+                    $(window).scroll(function() {
+                        var scroll = $(window).scrollTop();
+                        if (scroll >= nav_offset_top) {
+                            $("header").addClass("navbar_fixed");
+                        } else {
+                            $("header").removeClass("navbar_fixed");
+                        }
+                    })
+                }
+            }
+            navbarFixed();
+        });
+
+
+
+
+        var carouselContainer = $('.carousel');
+        var slideInterval = 3000;
+
+        function toggleCaption() {
+            $('.carousel-caption').hide();
+            var caption = carouselContainer.find('.active').find('.carousel-caption');
+            caption.delay(500).toggle("slide", {
+                direction: 'right'
+            });
+        }
+
+        carouselContainer.carousel({
+            interval: slideInterval,
+            cycle: true,
+            pause: "hover"
+        }).on('slid.bs.carousel', function() {
+            toggleCaption();
+        });
+    </script>
+    <style>
+        .fixed-top {
+            position: relative !important;
+        }
+        
+        li.side-nav-item {
+            background-color: #4a2a6c !important;
+            color: #fcf9ff !important;
+        }
+        
+        li.side-nav-item a {
+            color: #fcf9ff !important;
+            padding: 7px;
+        }
+    </style>
+
+
+
+    <script type="text/javascript">
+        /// some script
+        $(function() {
+            'use strict'
+
+            $("[data-trigger]").on("click", function() {
+                var trigger_id = $(this).attr('data-trigger');
+                $(trigger_id).toggleClass("show");
+                $('body').toggleClass("offcanvas-active");
+            });
+
+            // close if press ESC button 
+            $(document).on('keydown', function(event) {
+                if (event.keyCode === 27) {
+                    $(".navbar-collapse").removeClass("show");
+                    $("body").removeClass("overlay-active");
+                }
+            });
+
+            // close button 
+            $(".btn-close").click(function(e) {
+                $(".navbar-collapse").removeClass("show");
+                $("body").removeClass("offcanvas-active");
+            });
+
+
+        })
+    </script>
+</head>
+
+
+
+<body class="rightsidebar">
+    <div class="labora_page_loader" style="display: none;"></div>
+    <div id="wrapper">
+
+        <header class="main_header_area">
+
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_inner">
+                        <div class="text-center text-uppercase">
+                            <div class="row">
+                                <div class="col-md-3 d-none d-md-block text-secondary"><i class="fa fa-phone"></i> 08027501666</div>
+                                <div class="col-xs-12 col-sm-12 col-md-6"> SunRays Imaging & Laboratory Services Limited</div>
+                                <div class="col-md-3 d-none d-md-block ">
+                                    <a href="#" class="text-secondary  ml-1"><span><i class="fa fa-facebook  fa-1x" style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-twitter  fa-1x"  style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-instagram  fa-1x"  style="font-size:20px"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar shadow navbar-expand-lg navbar-light bg-white text-dark fixed-top  top-nav p-md-4">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <a class="navbar-brand logo text-right" href="index.html">
+                    <div class="float-right  w-100" style="margin-right: -45px;">
+                        <img src="assets/images/logo2.png" alt="logo" width="70" style="z-index: 30; ">
+                    </div>
+                </a>
+
+                <div class="collapse navbar-collapse m-0 p-0" id="navbarSupportedContent" style="width:100vw;">
+
+                    <div class="offcanvas-header mt-2 mr-3 text-right w-100">
+                        <button class="btn  btn-close text-right"> <i class="fa fa-times fa-2x text-white"></i></button>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto" style="z-index:100">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Who we are</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">What we do</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="acreditation.html">Our projects</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="updates.html">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Where we are</a></li>
+
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="py-5"></div>
+
+        <div id="subheader" class="sleft">
+            <div class="subheader-inner  mt-4">
+                <div class="subdesc">
+                    <h1 class="page-title"> Virology Screening
+                </div>
+                <div class="breadcrumb-main">
+                    <div class="breadcrumb-wrap inner">
+                        <div class="breadcrumbs">
+                            <!-- Breadcrumb NavXT 5.7.1 -->
+                            <span><a rel="v:url" title="Go to Up - Medical and Laboratory." href="#" class="home">Home</a></span><span><i class="fa fa-angle-right"></i></span><span><span>Updates</span></span>
+                        </div>
+                        <!-- .breadcrumbs-->
+                    </div>
+                    <!-- .breadcrumb-wrap-->
+                </div>
+                <!-- .breadcrumb-main-->
+            </div>
+            <!-- .subheader-inner-->
+        </div>
+        <!-- #subheader-->
+
+        <div id="main">
+            <div id="primary" class="pagemid">
+                <div class="inner">
+                    <div class="content-area">
+                        <div class="entry-content-wrapper clearfix">
+                            <article class="post">
+                                <header class="entry-header" style="padding-bottom: 2%;">
+                                    <h2 class="entry-title"><a href="#" rel="bookmark"> Virology Screening</a></h2>
+                                    <div class="entry-meta">
+                                        <span class="iva-pm-poston">August 4, 2020</span>
+                                        <span class="iva-pm-byauthor">Posted by:  <a href="#">Admin</a></span>
+                                        <span class="iva-pm-postin">Category:  <a href="#" rel="category tag">Editors Choice</a></span>
+                                        <span class="iva-pm-comments"><a href="#">1 Comment</a></span>
+                                        <span class="meta-likes"><a href="#" class="iva-love" title="Like this">
+										<span class="iva-love-count">0</span> Likes</a>
+                                        </span>
+                                    </div>
+                                    <!-- .entry-meta -->
+                                </header>
+                                <!-- .entry-header -->
+                                <div class="postimg-flat">
+                                    <a href="#" rel="bookmark">
+                                        <figure style="margin-bottom: 30px;">
+                                            <img src="assets/images/pexels-agung-pandit-wiguna-1128317.jpg" alt="Exploring Anatomy &amp; Physiology in the Laboratory" width="1100" height="550"></figure>
+                                    </a>
+                                </div>
+                                <!-- .postimg-flat-->
+                                <div class="entry-content">
+                                    <p>Vestibulum lacus dui, commodo sed sollicitudin nec, accumsan at magna. Pellentesque tempor, odio sed accumsan pretium, diam justo iaculis justo, vel aliquet diam mauris et eros.</p>
+                                    <a class="more-link" href="#">Continue Reading</a>
+                                </div>
+                                <!-- .entry-content -->
+                            </article>
+                            <!-- /post -->
+
+
+
+
+
+
+                        </div>
+                        <!-- .entry-content-wrapper-->
+                    </div>
+                    <!-- .content-area -->
+
+                    <div id="sidebar">
+                        <div class="content widget-area">
+                            <aside id="recent-posts-3" class=" widget widget_recent_entries">
+                                <h3 class="widget-title">Other services</h3>
+                                <ul>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#"> X-Ray/Digital image processing</a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">Special procedures - Barium Studies </a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">Mammography</a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#"> Ultrasound Scan  </a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">Echocardiography</a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">Electrocardiography</a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">  Hormonal Profile  </a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#"> Cardiac Marker </a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#">Tumor Maker </a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#"> Virology Screening</a>
+                                    </li>
+                                    <li class="side-nav-item shadow-sm">
+                                        <a href="#"> Serology</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <!-- .content widget-area-->
+                    </div>
+                    <!-- .sidebar-->
+                </div>
+                <!-- .inner -->
+            </div>
+            <!-- .pagemid -->
+        </div>
+        <!-- #main -->
+
+
+        <div id="footer">
+
+
+            <div class="footer-area-middle">
+                <div class="inner">
+                    <div class="inner-row">
+
+                        <aside id="nav_menu-6" class="widget widget_nav_menu  col_4">
+                            <h3 class="widget-title">Quick Links</h3>
+                            <div class="menu-footer-one-container">
+                                <ul class="menu">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Our Services</a></li>
+                                    <li><a href="acreditation.html">Acreditation</a></li>
+                                    <li><a href="#">Results</a></li>
+                                    <li><a href="career.html">Career</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside id="nav_menu-5" class="widget widget_nav_menu  col_4">
+                            <h3 class="widget-title">Useful Links</h3>
+                            <div class="menu-footer-one-container">
+                                <ul class="menu">
+                                    <li><a href="#">Life Insurance</a></li>
+                                    <li><a href="#">Home Insurance</a></li>
+                                    <li><a href="#">Child Insurance</a></li>
+                                    <li><a href="#">Family Health Plan</a></li>
+                                    <li><a href="#">Company Insurance</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside id="contactinfo_widgets-2" class="widget contactinfo-wg  col_4">
+                            <h3 class="widget-title">LETS TALK</h3>
+                            <div class="contactinfo-wrap">
+                                <p><span class="icon fa fa-location-arrow fa-lg"></span>
+                                    <span class="details">
+                                        Vin Vic Plaza, #51 Court Road,<br> 
+                                        Awka, Anambra State. </span>
+                                </p>
+                                <p class="phone">
+                                    <span class="icon fa fa-phone fa-lg"></span>
+                                    <span class="details">08027501666</span>
+                                </p>
+                                <p>
+                                    <span class="icon fa fa-map-marker fa-lg"></span>
+                                    <span class="details"><a class="more-link" target="_blank" href="#">View Map</a></span>
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- inner-row -->
+                </div>
+                <!-- inner -->
+            </div>
+            <!-- .footer-area-middle-->
+
+            <div class="footer-area-bottom">
+                <div class="inner">
+                    <aside id="text-7" class="textcenter widget widget_text">
+                        <div class="textwidget">
+                            &copy; Copyright 2020. All Right Reserved
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <!-- #footer -->
+
+    </div>
+    <!-- #wrapper-->
+
+    <div id="back-top"><a href="#header" title="Scroll Top"><span class="fa fa-angle-up fa-fw fa-2x"></span></a></div>
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
+
+</html>

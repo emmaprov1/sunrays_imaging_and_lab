@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Labora - Medical and Laboratory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900%7CPoppins:300,400,800&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome and peStroke Icons -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+
+    <!-- Required CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+    <!-- PrettyPhoto -->
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/prettyPhoto.css">
+
+    <!-- Required Scripts -->
+    <script src="assets/js/superfish.js"></script>
+    <script src="assets/js/hoverIntent.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/labora-custom.js"></script>
+
+    <!-- Flex Slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+    <script src="assets/js/jquery.flexslider-min.js"></script>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <script src="assets/js/owl.carousel.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $("#owl-20").owlCarousel({
+                autoPlay: 3000,
+                pagination: false,
+                items: 5,
+                itemsDesktop: [1199, 4],
+                itemsDesktopSmall: [1024, 4],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 2]
+            });
+        });
+    </script>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+
+
+
+    <script type="text/javascript">
+        /// some script
+        $(function() {
+            'use strict'
+
+            $("[data-trigger]").on("click", function() {
+                var trigger_id = $(this).attr('data-trigger');
+                $(trigger_id).toggleClass("show");
+                $('body').toggleClass("offcanvas-active");
+            });
+
+            // close if press ESC button 
+            $(document).on('keydown', function(event) {
+                if (event.keyCode === 27) {
+                    $(".navbar-collapse").removeClass("show");
+                    $("body").removeClass("overlay-active");
+                }
+            });
+
+            // close button 
+            $(".btn-close").click(function(e) {
+                $(".navbar-collapse").removeClass("show");
+                $("body").removeClass("offcanvas-active");
+            });
+
+
+        })
+    </script>
+</head>
+
+<body class="rightsidebar">
+    <div class="labora_page_loader" style="display: none;"></div>
+    <div id="wrapper">
+
+
+        <header class="main_header_area">
+
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_inner">
+                        <div class="text-center text-uppercase">
+                            <div class="row">
+                                <div class="col-md-3 d-none d-md-block text-secondary"><i class="fa fa-phone"></i> 08027501666</div>
+                                <div class="col-xs-12 col-sm-12 col-md-6"> SunRays Imaging & Laboratory Services Limited</div>
+                                <div class="col-md-3 d-none d-md-block ">
+                                    <a href="#" class="text-secondary  ml-1"><span><i class="fa fa-facebook  fa-1x" style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-twitter  fa-1x"  style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-instagram  fa-1x"  style="font-size:20px"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar shadow navbar-expand-lg navbar-light bg-white text-dark fixed-top  top-nav p-md-4">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <a class="navbar-brand logo text-right" href="index.html">
+                    <div class="float-right  w-100" style="margin-right: -45px;">
+                        <img src="assets/images/logo2.png" alt="logo" width="70" style="z-index: 30; ">
+                    </div>
+                </a>
+
+                <div class="collapse navbar-collapse m-0 p-0" id="navbarSupportedContent" style="width:100vw;">
+
+                    <div class="offcanvas-header mt-2 mr-3 text-right w-100">
+                        <button class="btn  btn-close text-right"> <i class="fa fa-times fa-2x text-white"></i></button>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto" style="z-index:100">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Who we are</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">What we do</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="acreditation.html">Our projects</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="updates.html">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Where we are</a></li>
+
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+        <div class="pt-4"></div>
+
+        <div id="subheader" class="sleft">
+            <div class="subheader-inner  mt-4">
+                <div class="subdesc">
+                    <h1 class="page-title">Careers</h1>
+                </div>
+                <div class="breadcrumb-main">
+                    <div class="breadcrumb-wrap inner">
+                        <div class="breadcrumbs">
+                            <!-- Breadcrumb NavXT 5.7.1 -->
+                            <span><a href="index.html" class="home">Home</a></span>
+                            <span><i class="fa fa-angle-right"></i></span>
+                            <span><span>Careers</span></span>
+                        </div>
+                        <!-- .breadcrumbs-->
+                    </div>
+                    <!-- .breadcrumb-wrap-->
+                </div>
+                <!-- .breadcrumb-main-->
+            </div>
+            <!-- .subheader-inner-->
+        </div>
+        <!-- #subheader-->
+
+        <div id="main">
+            <div id="primary" class="pagemid">
+                <div class="inner">
+                    <main class="content-area">
+                        <div class="entry-content-wrapper clearfix">
+
+                            <figure style="margin-bottom: 30px;">
+                                <img width="100%" src="assets/images/slider2.jpg" alt="">
+                            </figure>
+                            <h3><strong>Careers</strong></h3>
+                            <p>Nulla ut semper nisl. Duis quis nisi mattis, vulputate lorem eu, aliquet dolor. Nulla facilisi. Donec sed sem sed eros accumsan pharetra a ut felis. Proin a pellentesque enim, vel maximus felis. Sed eu magna et lacus egestas
+                                tincidunt at porttitor felis. Sed cursus consectetur purus a sagittis. Suspendisse sit amet venenatis lorem. Nullam cursus id eros et sagittis. Sed ac quam nec dolor aliquam lobortis. Cras posuere tortor et ipsum scelerisque
+                                iaculis.
+                            </p>
+
+                            <div class="ac_wrap arrow">
+
+                                <div class="ac_title active">
+                                    <span class="arrow"></span>Which Plan is right for me?
+                                </div>
+                                <div class="ac_content active">
+                                    <p>Duis malesuada felis at tortor finibus, at elementum diam pellentesque. Sed turpis magna, fringilla nec suscipit ac, rutrum luctus lectus. Aenean vitae dictum nunc, ut faucibus ipsum. Vivamus nec metus sem. Pellentesque
+                                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vehicula aliquam enim, nec eleifend orci eleifend et. In imperdiet risus blandit tincidunt consequat. Fusce pellentesque pellentesque
+                                        tellus, a elementum odio ornare sit amet.</p><br>
+                                </div>
+                                <!-- .ac_content active-->
+
+                                <div class="ac_title ">
+                                    <span class="arrow"></span>What kind of research do you do?
+                                </div>
+                                <div class="ac_content" style="display: none;"><br>
+                                    <p>Duis malesuada felis at tortor finibus, at elementum diam pellentesque. Sed turpis magna, fringilla nec suscipit ac, rutrum luctus lectus. Aenean vitae dictum nunc, ut faucibus ipsum. Vivamus nec metus sem. Pellentesque
+                                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vehicula aliquam enim, nec eleifend orci eleifend et. In imperdiet risus blandit tincidunt consequat. Fusce pellentesque pellentesque
+                                        tellus, a elementum odio ornare sit amet.</p>
+                                </div>
+                                <!-- .ac_content-->
+
+                                <div class="ac_title">
+                                    <span class="arrow"></span>How would i pay the bills about the research?
+                                </div>
+                                <div class="ac_content" style="display: none;">
+                                    <p>Duis malesuada felis at tortor finibus, at elementum diam pellentesque. Sed turpis magna, fringilla nec suscipit ac, rutrum luctus lectus. Aenean vitae dictum nunc, ut faucibus ipsum. Vivamus nec metus sem. Pellentesque
+                                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vehicula aliquam enim, nec eleifend orci eleifend et. In imperdiet risus blandit tincidunt consequat. Fusce pellentesque pellentesque
+                                        tellus, a elementum odio ornare sit amet.</p>
+                                </div>
+                                <!-- .ac_content-->
+
+                                <div class="ac_title">
+                                    <span class="arrow"></span>Can you help us raise money?
+                                </div>
+                                <div class="ac_content" style="display: none;">
+                                    <p>Duis malesuada felis at tortor finibus, at elementum diam pellentesque. Sed turpis magna, fringilla nec suscipit ac, rutrum luctus lectus. Aenean vitae dictum nunc, ut faucibus ipsum. Vivamus nec metus sem. Pellentesque
+                                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vehicula aliquam enim, nec eleifend orci eleifend et. In imperdiet risus blandit tincidunt consequat. Fusce pellentesque pellentesque
+                                        tellus, a elementum odio ornare sit amet.</p>
+                                </div>
+                                <!-- .ac_content-->
+
+                                <div class="ac_title ">
+                                    <span class="arrow"></span>What industries do you specialize in?
+                                </div>
+                                <div class="ac_content " style="display: none;">
+                                    <p>Duis malesuada felis at tortor finibus, at elementum diam pellentesque. Sed turpis magna, fringilla nec suscipit ac, rutrum luctus lectus. Aenean vitae dictum nunc, ut faucibus ipsum. Vivamus nec metus sem. Pellentesque
+                                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam vehicula aliquam enim, nec eleifend orci eleifend et. In imperdiet risus blandit tincidunt consequat. Fusce pellentesque pellentesque
+                                        tellus, a elementum odio ornare sit amet.</p>
+                                </div>
+                            </div>
+                            <!-- .ac_wrap arrow-->
+                            <h3>Open Positions</h3>
+
+                            <div class="at-vacancy-table-wrap  labora_vacancy_table_list">
+                                <table class="at-vacancy-table tablesorter">
+                                    <thead>
+                                        <tr>
+                                            <th class="header headerSortDown">Job Posting Title</th>
+                                            <th class="header">Location</th>
+                                            <th class="header">Department</th>
+                                            <th class="header">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#">Clinical Lab Specialist</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Full-Time</span>9 months ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Clinical Laboratory Scientist</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Full-Time</span>9 months ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Lab Coordinator</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Full-Time</span>9 months ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Laboratory Supervisor</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Full-Time</span>9 months ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Medical Technologist</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Part-Time</span>9 months ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#">Veterinary Health Care Technician</a></td>
+                                            <td>Awka, Anambra state</td>
+                                            <td>Lab Management </td>
+                                            <td class="date"><span>Part-Time</span>9 months ago</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- .at-vacancy-table-wrap-->
+                        </div>
+                        <!-- .entry-content-wrapper -->
+                    </main>
+                    <!-- .content-area -->
+                    <div id="sidebar">
+                        <div class="content widget-area clearfix">
+                            <aside id="nav_menu-8" class="widget-area widget_nav_menu">
+                                <div class="menu-about-menu-container">
+                                    <ul id="menu-about-menu" class="menu">
+                                        <li><a href="about.html">What we do</a></li>
+                                        <li><a href="services.html">Our services</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="about.html">Our Approach</a></li>
+                                        <li><a href="Acreditation.html" style="border-left: 3px solid rgb(153, 11, 110)">Acreditations</a></li>
+                                        <li><a href="result.html">Result</a></li>
+                                        <li><a href="contact.html">Our Contact</a></li>
+                                    </ul>
+                                </div>
+                                <!-- .menu-about-menu-container-->
+                            </aside>
+                            <!-- .widget-area-->
+
+
+                        </div>
+                        <!-- .widget-area-->
+                    </div>
+                    <!-- #sidebar-->
+                </div>
+                <!-- .inner -->
+            </div>
+            <!-- .pagemid -->
+        </div>
+        <!-- #main -->
+
+        <div id="footer">
+
+
+            <div class="footer-area-middle">
+                <div class="inner">
+                    <div class="inner-row">
+
+                        <aside id="nav_menu-6" class="widget widget_nav_menu  col_4">
+                            <h3 class="widget-title">Quick Links</h3>
+                            <div class="menu-footer-one-container">
+                                <ul class="menu">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Our Services</a></li>
+                                    <li><a href="acreditation.html">Acreditation</a></li>
+                                    <li><a href="#">Results</a></li>
+                                    <li><a href="career.html">Career</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside id="nav_menu-5" class="widget widget_nav_menu  col_4">
+                            <h3 class="widget-title">Useful Links</h3>
+                            <div class="menu-footer-one-container">
+                                <ul class="menu">
+                                    <li><a href="#">Life Insurance</a></li>
+                                    <li><a href="#">Home Insurance</a></li>
+                                    <li><a href="#">Child Insurance</a></li>
+                                    <li><a href="#">Family Health Plan</a></li>
+                                    <li><a href="#">Company Insurance</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside id="contactinfo_widgets-2" class="widget contactinfo-wg  col_4">
+                            <h3 class="widget-title">LETS TALK</h3>
+                            <div class="contactinfo-wrap">
+                                <p><span class="icon fa fa-location-arrow fa-lg"></span>
+                                    <span class="details">
+                                        Vin Vic Plaza, #51 Court Road,<br> 
+                                        Awka, Anambra State. </span>
+                                </p>
+                                <p class="phone">
+                                    <span class="icon fa fa-phone fa-lg"></span>
+                                    <span class="details">08027501666</span>
+                                </p>
+                                <p>
+                                    <span class="icon fa fa-map-marker fa-lg"></span>
+                                    <span class="details"><a class="more-link" target="_blank" href="#">View Map</a></span>
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- inner-row -->
+                </div>
+                <!-- inner -->
+            </div>
+            <!-- .footer-area-middle-->
+
+            <div class="footer-area-bottom">
+                <div class="inner">
+                    <aside id="text-7" class="textcenter widget widget_text">
+                        <div class="textwidget">
+                            &copy; Copyright 2020. All Right Reserved
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <!-- #footer -->
+
+    </div>
+    <!-- #wrapper-->
+
+    <div id="back-top"><a href="#header" title="Scroll Top"><span class="fa fa-angle-up fa-fw fa-2x"></span></a></div>
+
+</body>
+
+</html>

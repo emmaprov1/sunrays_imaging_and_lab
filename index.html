@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SunRay imaging - Medical and Laboratory</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900%7CPoppins:300,400,800&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome and peStroke Icons -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Required CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+    <!-- PrettyPhoto -->
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/prettyPhoto.css">
+
+    <!-- Required Scripts -->
+    <script src="assets/js/superfish.js"></script>
+    <script src="assets/js/hoverIntent.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/labora-custom.js"></script>
+
+    <!-- Flex Slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+    <script src="assets/js/jquery.flexslider-min.js"></script>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <script src="assets/js/owl.carousel.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $("#owl-20").owlCarousel({
+                autoPlay: 3000,
+                pagination: false,
+                items: 5,
+                itemsDesktop: [1199, 4],
+                itemsDesktopSmall: [1024, 4],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 2]
+            });
+        });
+
+
+
+
+
+
+
+        // Sticky Header
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 100) {
+                $(".top-nav").addClass("light-header");
+            } else {
+                $(".top-nav").removeClass("light-header");
+            }
+        });
+
+        // Year for copy content
+        $(function() {
+            var theYear = new Date().getFullYear();
+            $('#year').html(theYear);
+        });
+    </script>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 1900
+            })
+        });
+
+        $(document).ready(function() {
+            "use strict";
+
+            var nav_offset_top = $('header').height() + 100;
+
+            //* Navbar Fixed  
+            function navbarFixed() {
+                if ($('header').length) {
+                    $(window).scroll(function() {
+                        var scroll = $(window).scrollTop();
+                        if (scroll >= nav_offset_top) {
+                            $("header").addClass("navbar_fixed");
+                        } else {
+                            $("header").removeClass("navbar_fixed");
+                        }
+                    })
+                }
+            }
+            navbarFixed();
+        });
+
+
+        var carouselContainer = $('.carousel');
+        var slideInterval = 3000;
+
+        function toggleCaption() {
+            $('.carousel-caption').hide();
+            var caption = carouselContainer.find('.active').find('.carousel-caption');
+            caption.delay(500).toggle("slide", {
+                direction: 'right'
+            });
+        }
+
+        carouselContainer.carousel({
+            interval: slideInterval,
+            cycle: true,
+            pause: "hover"
+        }).on('slid.bs.carousel', function() {
+            toggleCaption();
+        });
+    </script>
+
+    <style>
+        .fixed-top {
+            position: relative !important;
+        }
+        
+        #myCarousel {
+            width: 400px;
+        }
+        
+        .caption-animate .item.active .carousel-caption {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        
+        .caption-animate .item.active .carousel-caption.infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        .caption-animate .item.active .carousel-caption.hinge {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+        }
+        
+        .caption-animate .item.active .carousel-caption.flipOutX,
+        .caption-animate .item.active .carousel-caption.flipOutY,
+        .caption-animate .item.active .carousel-caption.bounceIn,
+        .caption-animate .item.active .carousel-caption.bounceOut {
+            -webkit-animation-duration: .75s;
+            animation-duration: .75s;
+        }
+        
+        .caption-animate .item .carousel-caption.fadeIn,
+        .caption-animate .item .carousel-caption.fadeInDown,
+        .caption-animate .item .carousel-caption.fadeInDownBig,
+        .caption-animate .item .carousel-caption.fadeInLeft,
+        .caption-animate .item .carousel-caption.fadeInLeftBig,
+        .caption-animate .item .carousel-caption.fadeInRight,
+        .caption-animate .item .carousel-caption.fadeInRightBig,
+        .caption-animate .item .carousel-caption.fadeInUp,
+        .caption-animate .item .carousel-caption.fadeInUpBig {
+            opacity: 0;
+        }
+    </style>
+
+    <style>
+        @media(min-width:800px) {
+            .carousel-caption span.slide-text {
+                font-size: 2.5rem !important;
+                color: #f8f8f8 !important;
+                font-weight: 700 !important;
+                text-align: left !important;
+                background-color: rgba(74, 42, 108, 0.781);
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        
+        @media(max-width:800px) {
+            .carousel-caption span.slide-text {
+                font-size: 1.5rem !important;
+                color: #f8f8f8 !important;
+                font-weight: 700 !important;
+                text-align: left !important;
+                background-color: rgba(74, 42, 108, 0.781);
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        
+        @media(max-width:400px) {
+            .carousel-caption span.slide-text {
+                font-size: 1.1rem !important;
+                line-height: 2.0;
+                color: #f8f8f8 !important;
+                font-weight: 700 !important;
+                text-align: left !important;
+                background-color: rgba(74, 42, 108, 0.781);
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        
+        .carousel-caption {
+            position: absolute;
+            top: 100;
+            text-align: left;
+            transition: all 10.5s ease-in-out;
+        }
+    </style>
+
+
+
+
+    <script type="text/javascript">
+        /// some script
+        $(function() {
+            'use strict'
+
+            $("[data-trigger]").on("click", function() {
+                var trigger_id = $(this).attr('data-trigger');
+                $(trigger_id).toggleClass("show");
+                $('body').toggleClass("offcanvas-active");
+            });
+
+            // close if press ESC button 
+            $(document).on('keydown', function(event) {
+                if (event.keyCode === 27) {
+                    $(".navbar-collapse").removeClass("show");
+                    $("body").removeClass("overlay-active");
+                }
+            });
+
+            // close button 
+            $(".btn-close").click(function(e) {
+                $(".navbar-collapse").removeClass("show");
+                $("body").removeClass("offcanvas-active");
+            });
+
+
+        })
+    </script>
+
+    <style type="text/css">
+        body.offcanvas-active {
+            overflow: hidden;
+        }
+        
+        .offcanvas-header {
+            display: none;
+        }
+        
+        .header_top {
+            height: 50px;
+            background: linear-gradient(180deg, #4a2a6c, #1a102c);
+            font-weight: bolder;
+        }
+        
+        @media (max-width: 992px) {
+            .offcanvas-header {
+                display: block;
+                background: linear-gradient(180deg, #4a2a6c, #1a102c)
+            }
+            .header_top {
+                height: 50px;
+                background: linear-gradient(180deg, #4a2a6c, #1a102c)
+            }
+            .navbar-brand {
+                /* margin-right: -40px; */
+            }
+            .navbar-collapse {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 100%;
+                width: 100%;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                overflow-y: auto;
+                visibility: hidden;
+                background-color: black;
+                transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+            }
+            .navbar-collapse.show {
+                visibility: visible;
+                transform: translateX(-100%);
+            }
+            .mob-sec-heading h2 {
+                font-size: 30px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="labora_page_loader" style="display: none;"></div>
+
+    <div id="wrapper">
+        <header class="main_header_area">
+
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_inner">
+                        <div class="text-center text-uppercase">
+                            <div class="row">
+                                <div class="col-md-3 d-none d-md-block text-secondary"><i class="fa fa-phone"></i> 08027501666</div>
+                                <div class="col-xs-12 col-sm-12 col-md-6"> SunRays Imaging & Laboratory Services Limited</div>
+                                <div class="col-md-3 d-none d-md-block ">
+                                    <a href="#" class="text-secondary  ml-1"><span><i class="fa fa-facebook  fa-1x" style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-twitter  fa-1x"  style="font-size:20px"></i></span></a>
+                                    <a href="#" class="text-secondary ml-1"><span><i class="fa fa-instagram  fa-1x"  style="font-size:20px"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar shadow navbar-expand-lg navbar-light bg-white text-dark fixed-top  top-nav p-md-4">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <a class="navbar-brand logo text-right" href="index.html">
+                    <div class="float-right  w-100" style="margin-right: -45px;">
+                        <img src="assets/images/logo2.png" alt="logo" width="70" style="z-index: 30; ">
+                    </div>
+                </a>
+
+                <div class="collapse navbar-collapse m-0 p-0" id="navbarSupportedContent" style="width:100vw;">
+
+                    <div class="offcanvas-header mt-2 mr-3 text-right w-100">
+                        <button class="btn  btn-close text-right"> <i class="fa fa-times fa-2x text-white"></i></button>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto" style="z-index:100">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Who we are</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">What we do</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="acreditation.html">Our projects</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="updates.html">Updates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Where we are</a></li>
+
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="py-5"></div>
+        <!-- Intro Seven -->
+        <section class="carousel slide bg-overlay-light h-auto" id="carouselExampleCaptions">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3" class=""></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="4" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img class="d-block img-fluid" alt="First slide" src="assets/images/comp-staff.jpg" style="min-height:210px">
+                    <div class="carousel-caption fadeInLeft">
+                        <span class="slide-text">Welcome to SunRays Imaging & Laboratory Services Ltd</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid w-100" alt="First slide" src="assets/images/maxresdefault.jpg" style="min-height:210px">
+                    <div class="carousel-caption fadeInLeft">
+                        <span class="slide-text">Diagnostic services.</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid" alt="First slide" src="assets/images/slider112.jpg" style="min-height:210px">
+                    <div class="carousel-caption fadeInLeft">
+                        <span class="slide-text">Laboratory Services</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid w-100" alt="First slide" src="assets/images/boss_scanining (1).jpeg" style="min-height:210px">
+                    <div class="carousel-caption fadeInLeft">
+                        <span class="slide-text">Laboratory Services</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid" alt="First slide" src="assets/images/decal.jpg" style="min-height:210px">
+                    <div class="carousel-caption fadeInLeft">
+                        <span class="slide-text">Laboratory Services</span>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </section>
+
+
+
+        <div id="main" class="content-area">
+            <section class=" container pt-5 pb-2">
+                <div class="section_inner">
+
+                    <div class="at-fancy-heading-v1 textcenter mob-sec-heading px-3">
+                        <h2>Welcome to SunRays Imaging & Laboratory Services Ltd</h2>
+                        <!--<h3>Our laboratory shows its quality in the sector with its experimental, validation, training and consultancy services.</h3>-->
+                        <span class="at-fancy-heading-v1-sep"></span>
+                    </div>
+                    <!-- .fancy-heading-->
+                </div>
+            </section>
+
+            <style>
+                .home-gride-title {
+                    font-size: 21px;
+                    text-align: center;
+                    font-weight: 600;
+                }
+                
+                .home-grid p {
+                    font-size: 20px;
+                }
+                
+                .center {
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                .rounded-lab {
+                    border-radius: 20px;
+                }
+            </style>
+            <section class="bg-light pt-5" style="background-image:url('https://www.pngkit.com/png/full/767-7671009_blue-light-technology-lines-download-hd-png-clipart.png'); background-size:contain; ">
+                <div class=" container py-1 pb-5">
+                    <div class="row m-0 p-0">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="bg-white rounded-lab border shadow-sm mb-3 p-2" data-aos="flip-left">
+                                <div class="text-center bg-white p-1 border-0">
+                                     <img src="https://www.flaticon.com/svg/static/icons/svg/2308/2308253.svg" class="w-25"> 
+                                </div>
+                                <div class="text-center home-grid">
+                                    <h1 class="home-gride-title">One Stop Center</h1>
+                                    <p class="text-secondary" style="font-size:1.0rem">Our highly qualified Radiographers, Sonographers, Medical lab. scientist and Radiologist are highly skilled and experienced in their field of work.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="bg-white rounded-lab border shadow-sm mb-3 p-2" data-aos="flip-left">
+                                <div class="text-center bg-white p-1 border-0">
+                                    <img src="assets/images/g2.png" class="w-25">
+                                </div>
+                                <div class="text-center home-grid">
+                                    <h1 class="home-gride-title">Profession Services</h1>
+                                    <p class="text-secondary" style="font-size:1.0rem">We provide quality services at affordable prices, earning the goodwill of both the medical professionals and the public.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="bg-white rounded-lab border shadow-sm mb-3 p-2" data-aos="flip-left">
+                                <div class=" text-center bg-white p-1 border-0">
+                                    <img src="assets/images/g4.png" class="w-25">
+                                </div>
+                                <div class=" text-center home-grid">
+                                    <h1 class="home-gride-title font-weight-bold">Sophisticated Technology</h1>
+                                    <p class="text-secondary" style="font-size:1.0rem">We use the most sophisticated radiological modalities in medicine and we listen to paying attention to our customers with great interest.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- <section class="shadow-sm" style="background-color: #452d5f;">
+                <div class="container p-5 "> -->
+            <div class="row m-0 p-0" style="background-color: #452d5f;">
+                <div class="col-xs-12 col-sm-6 text-center p-0" style="background-image: url(';assets/images/comp-staff2.jpg');">
+                    <img src="assets/images/comp-staff2.jpg" alt="" class="w-100 img-sec">
+                </div>
+                <div class="col-xs-12 col-sm-6 pt-4 my-auto at-fancy-heading-v1 mob-sec-heading mob-sec-heading text-light">
+                    <h2 class="text-light">Who we are</h2>
+                    <p>SunRays Imaging & Laboratory services Ltd, is an indigenous company registered in Nigeria to help alleviate health care needs of the masses in the areas of Medical Imaging and Medical laboratory. The aim of establishing the company
+                        is not only to positively impact on the lives of Nigerians, in the area of healthcare but to also impact on Nigerian economy through the provision of healthcare services that can help reduce the burden of medical tourism on the
+                        economy.
+                    </p>
+                    <p><button><a href="#" class="text-light">MORE ABOUT US <i class="fa fa-long-arrow-right"></i></a></button></p>
+                </div>
+            </div>
+            <!-- </div>
+            </section> -->
+            <!-- section_row -->
+
+
+
+
+
+
+            <section class="py-5">
+                <div class="section_inner">
+                    <div class="container text-center pb-3">
+                        <h1>Our Services </h1>
+                        <span class="at-fancy-heading-v1-sep"></span>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row m-0 p-0">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="shadow p-1  text-center text-white rounded" style="background-color: #452d5f;">
+                                    <h2 class="text-white">Diagnostic Services</h2>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="list-group list-group-flush  border p-0 m-0">
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> X-Ray/Digital image processing</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Special procedures - Barium Studies</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Mammography</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Ultrasound Scan</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Echocardiography</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Electrocardiography</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="shadow p-1 text-center text-white rounded" style="background-color: #452d5f;">
+                                    <h2 class="text-white">Laboratory Services</h2>
+                                </div>
+
+                                <div class="container-fluid">
+                                    <ul class="list-group list-group-flush border p-0 m-0">
+
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Hematology | Chemistry | Microbiology Investigation</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Hormonal Profile</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Cardiac Marker</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Tumor Maker</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Virology Screening</li>
+                                        <li class="list-group-item"><i class="fa fa-angle-double-right"></i> Serology</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-0 p-0 d-none">
+
+
+                            <div class="col-sm-3">
+                                <div class="card shadow-sm rounded p-0  mb-3" data-aos="zoom-out-down">
+                                    <div class="service-img-container">
+                                        <img src="assets/images/xxray.jpeg" style="margin-top:-130px" class="service-img zoom">
+                                    </div>
+                                    <div class="p-3">
+                                        <h1 class="service-title">Digital X-ray</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card shadow-sm rounded p-0 mb-3" data-aos="zoom-out-down">
+                                    <div class="service-img-container">
+                                        <img src="assets/images/ultrass.jpeg" style="margin-top:-40px" class="service-img zoom">
+                                    </div>
+                                    <div class="p-3">
+                                        <h1 class="service-title">Ultrasound Scan</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card shadow-sm rounded p-0  mb-3" data-aos="zoom-out-down">
+                                    <div class="service-img-container">
+                                        <img src="assets/images/lab1.jpeg" class="service-img zoom">
+                                    </div>
+                                    <div class="p-3">
+                                        <h1 class="service-title">Laboratory services</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 d-none d-md-block">
+                                <div class="card shadow-sm  rounded p-0  mb-3" data-aos="zoom-out-down">
+                                    <div class="service-img-container">
+                                        <img src="assets/images/ultrasound-machine.jpg" class="service-img zoom">
+                                    </div>
+                                    <div class="p-3">
+                                        <h1 class="service-title">Echocardiography</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- .section_inner-->
+            </section>
+            <!-- .section_row-->
+
+
+
+
+
+            <!-- .section_row-->
+
+            <!-- <div class="partial_section_wrap clearfix" style="background-color:#e4ebef; padding: 0;">
+
+                <div class="partial_section_image">
+                    <div><img src="https://image.freepik.com/free-photo/doctor-holding-pointing-x-ray-film-patient_38480-585.jpg" alt="" class="w-100"></div>
+                </div>
+
+                <div class="partial_section_content">
+                    <div class="ps_content clearfix">
+                        <div class="at-fancy-heading-v1 textleft" style="margin-top:80px;">
+                            <h2 style="font-weight: 800;">With us all you experience is care.</h2>
+                            <span class="at-fancy-heading-v1-sep"></span>
+                        </div>
+                        <div>
+                            <p>We pride ourselves in our strong excellent customer service skills, which we believe is pivotal to the development of any serious business. We have created a very friendly and comfortable ambience for all our customers/visitors
+                                and will continue to improve on it, to ensure continuity in our service delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- .row-->
+
+
+
+
+            <section class="py-5  bg-light">
+                <div class="container">
+
+                    <div class="at-fancy-heading-v1  text-center">
+                        <h1 class="section_title"> HEALTH TIPS & PACKAGES</h1>
+                        <span class="at-fancy-heading-v1-sep"></span>
+                    </div>
+                    <div class="row m-0 p-0">
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card shadow pt-0 mt-0  mb-2" data-aos="zoom-out-down">
+                                <div class="at-post-content">
+                                    <img src="https://image.freepik.com/free-photo/researcher-with-glass-laboratory-chemical-test-tubes-with-liquid-analytical_43284-1616.jpg">
+                                    <h2 class="rad-entry-title  p-3">
+                                        <a href="#" class="text-dark">Sample analysis in the laboratory</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card shadow pt-0 mt-0  mb-2" data-aos="zoom-out-down">
+                                <div class="at-post-content">
+                                    <img src="https://www.radiologybusiness.com/sites/default/files/styles/media_image_mobile/public/2020-06/knee-2253047_1920_copy.jpg" class="w-100" style="width:500px;height:230px; overflow:hidden">
+                                    <h2 class="rad-entry-title p-3">
+                                        <a href="#" class="text-dark">Ultrasonography a swift and sound alternative to MRI for...<!-- diagnosing anterior knee pain.  https://www.radiologybusiness.com/topics/quality/ultrasonography-mri-diagnosing-anterior-knee-pain--></a>
+                                        
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="card shadow pt-0 mt-0 mb-2" data-aos="zoom-out-down">
+                                <div class="at-post-content">
+                                    <img src="https://image.freepik.com/free-vector/brain-mri-hospital-cartoon-doctor-patient-medical-examination_33099-111.jpg" style="width:100%; height:230px">
+                                    <h2 class="rad-entry-title  p-3">
+                                        <a href="#" class="text-dark">Advance radiological equipment</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- three_fourth -->
+
+
+            </section>
+            <!-- .section_inner-->
+            </div>
+            <!-- #main.content-area-->
+
+            <div id="footer">
+
+                <!-- .footer-area-top-->
+
+                <div class="footer-area-middle">
+                    <div class="inner">
+                        <div class="inner-row">
+
+                            <aside id="nav_menu-6" class="widget widget_nav_menu  col_4">
+                                <h3 class="widget-title">Quick Links</h3>
+                                <div class="menu-footer-one-container">
+                                    <ul class="menu">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="services.html">Our Services</a></li>
+                                        <li><a href="acreditation.html">Acreditation</a></li>
+                                        <li><a href="#">Results</a></li>
+                                        <li><a href="career.html">Career</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                            <aside id="nav_menu-5" class="widget widget_nav_menu  col_4">
+                                <h3 class="widget-title">Useful Links</h3>
+                                <div class="menu-footer-one-container">
+                                    <ul class="menu">
+                                        <li><a href="#">Life Insurance</a></li>
+                                        <li><a href="#">Home Insurance</a></li>
+                                        <li><a href="#">Child Insurance</a></li>
+                                        <li><a href="#">Family Health Plan</a></li>
+                                        <li><a href="#">Company Insurance</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                            <aside id="contactinfo_widgets-2" class="widget contactinfo-wg  col_4">
+                                <h3 class="widget-title">LETS TALK</h3>
+                                <div class="contactinfo-wrap">
+                                    <p><span class="icon fa fa-location-arrow fa-lg"></span>
+                                        <span class="details">
+                                        Vin Vic Plaza, #51 Court Road,<br> 
+                                        Awka, Anambra State. </span>
+                                    </p>
+                                    <p class="phone">
+                                        <span class="icon fa fa-phone fa-lg"></span>
+                                        <span class="details">08027501666</span>
+                                    </p>
+                                    <p>
+                                        <span class="icon fa fa-map-marker fa-lg"></span>
+                                        <span class="details"><a class="more-link" target="_blank" href="#">View Map</a></span>
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                        <!-- inner-row -->
+                    </div>
+                    <!-- inner -->
+                </div>
+                <!-- .footer-area-middle-->
+
+                <div class="footer-area-bottom">
+                    <div class="inner">
+                        <aside id="text-7" class="textcenter widget widget_text">
+                            <div class="textwidget">
+                                &copy; Copyright 2020. All Right Reserved
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <!-- #footer -->
+
+        </div>
+        <!-- #wrapper-->
+
+        <div id="back-top"><a href="#header" title="Scroll Top"><span class="fa fa-angle-up fa-fw fa-2x"></span></a></div>
+
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>
